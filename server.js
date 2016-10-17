@@ -18,7 +18,7 @@ app.get('/ui/madi.png', function (req, res) {
 });
 
 app.get ('/imad1',function(req,res){
-    res.send(`Hi. This is Imad`);
+    res.send(`Hi. This is Imad1`);
 });
 
 app.get ('/imad2',function(req,res){

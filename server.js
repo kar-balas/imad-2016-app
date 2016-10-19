@@ -5,6 +5,56 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+
+// htmlTemplate
+
+var articleone=function(){ 
+    var htmlTemplate = {
+    `<html>
+     <head>
+        <title>
+          Article One
+        </title>
+         <meta name="viewport" content="width= device-width initial-scale=1" />
+         <link href="/ui/style.css"  rel="stylesheet"   />
+
+       </head>
+         <body>
+         <div class='container'>
+
+         <div>
+        <a href="/">home </a>
+        </div>
+         <hr/>
+         <h3>
+            Article One
+         </h3>
+         <div>
+        Sep 5 , 2016
+          </div>
+         <div>
+         <p>
+             This is the content for article One. This is the content for article One.This is the content for article One.
+               This is the content for article One.This is the content for article One.This is the content for article One.This is the content for article One.This is the content for article One.This is the content for article One.
+         </p>
+          <p>
+           This is the content for article One. This is the content for article One.This is the content for article One.
+               This is the content for article One.This is the content for article One.This is the content for article One.This is the content for article One.This is the content for article One.This is the content for article One.
+           </p>
+           <p>
+         This is the content for article One. This is the content for article One.This is the content for article One.
+           This is the content for article One.This is the content for article One.This is the content for article One.This is the content for article One.This is the content for article One.This is the content for article One.
+            </p>    
+              </div>
+              </div>
+
+            </body>
+    
+            };
+            return htnlTemplate;
+            };
+            
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
@@ -18,7 +68,7 @@ app.get('/ui/madi.png', function (req, res) {
 });
 
 app.get ('/article-one',function(req,res){
-    res.sendFile(path.join(__dirname,'ui','article1.html'));
+    res.send(articleone());
 });
 
 app.get ('/article-two',function(req,res){

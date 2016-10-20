@@ -8,7 +8,7 @@ app.use(morgan('combined'));
 
 // htmlTemplate
 var article={
-    articleone:{
+   'article-one':{
                  title : 'Article One',
                  heading3: 'Article One',
                  date: 'Sep 5 , 2016',
@@ -22,7 +22,7 @@ var article={
                            This is the content for article One. This is the content for article One.This is the content for article One.This is the content for article One.This is the content for article One.This is the content for article One.This is the content for article One.This is the content for article One.This is the content for article One.
                          </p>`    
                     },
-      articletwo:{
+      'articletwo':{
                     title: 'Article Two', 
                     heading3:'Article Two',
                    date: 'Sep 5 , 2016',
@@ -91,6 +91,7 @@ app.get('/ui/madi.png', function (req, res) {
 });
 
 app.get ('/:articleName',function(req,res){
+    var articleName=req.params.articleName;
     res.send(articleFn(article[articleName]));
 });
 

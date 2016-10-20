@@ -7,12 +7,36 @@ app.use(morgan('combined'));
 
 
 // htmlTemplate
+var articleoneObj={
+     title : 'Article One',
+     heading3: 'Article One',
+     date: 'Sep 5 , 2016',
+     content:`<p>
+             This is the content for article One. This is the content for article One.This is the content for article One.
+               This is the content for article One.This is the content for article One.This is the content for article One.This is the content for article One.This is the content for article One.This is the content for article One.
+         </p>
+          <p>
+           This is the content for article One. This is the content for article One.This is the content for article One.
+               This is the content for article One.This is the content for article One.This is the content for article One.This is the content for article One.This is the content for article One.This is the content for article One.
+           </p>
+           <p>
+         This is the content for article One. This is the content for article One.This is the content for article One.
+           This is the content for article One.This is the content for article One.This is the content for article One.This is the content for article One.This is the content for article One.This is the content for article One.
+            </p>`    
+     
+};
 
-var articleone=function(){ 
+
+
+var articleoneFn=function(data){ 
+    var title=data.title;
+    var heading3=data.heading3;
+    var date=data.date;
+    var content=data.content;
     var htmlTemplate =    `<html>
      <head>
         <title>
-          Article One
+          ($title)
         </title>
          <meta name="viewport" content="width= device-width initial-scale=1" />
          <link href="/ui/style.css"  rel="stylesheet"   />
@@ -26,24 +50,15 @@ var articleone=function(){
         </div>
          <hr/>
          <h3>
-            Article One
+          ($heading3)
          </h3>
          <div>
-        Sep 5 , 2016
+         ($date)
+        
           </div>
          <div>
-         <p>
-             This is the content for article One. This is the content for article One.This is the content for article One.
-               This is the content for article One.This is the content for article One.This is the content for article One.This is the content for article One.This is the content for article One.This is the content for article One.
-         </p>
-          <p>
-           This is the content for article One. This is the content for article One.This is the content for article One.
-               This is the content for article One.This is the content for article One.This is the content for article One.This is the content for article One.This is the content for article One.This is the content for article One.
-           </p>
-           <p>
-         This is the content for article One. This is the content for article One.This is the content for article One.
-           This is the content for article One.This is the content for article One.This is the content for article One.This is the content for article One.This is the content for article One.This is the content for article One.
-            </p>    
+         ($content)
+         
               </div>
               </div>
 
@@ -65,7 +80,7 @@ app.get('/ui/madi.png', function (req, res) {
 });
 
 app.get ('/article-one',function(req,res){
-    res.send(articleone());
+    res.send(articleoneFn(articleoneObj));
 });
 
 app.get ('/article-two',function(req,res){

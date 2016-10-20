@@ -48,7 +48,7 @@ var articleone=function(){
               </div>
 
             </body>`  ;
-            return htnlTemplate;
+            return htmlTemplate;
             };
             
 

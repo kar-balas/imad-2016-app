@@ -7,28 +7,39 @@ app.use(morgan('combined'));
 
 
 // htmlTemplate
-var articleoneObj={
-     title : 'Article One',
-     heading3: 'Article One',
-     date: 'Sep 5 , 2016',
-     content:`<p>
-             This is the content for article One. This is the content for article One.This is the content for article One.
-               This is the content for article One.This is the content for article One.This is the content for article One.This is the content for article One.This is the content for article One.This is the content for article One.
-         </p>
-          <p>
-           This is the content for article One. This is the content for article One.This is the content for article One.
-               This is the content for article One.This is the content for article One.This is the content for article One.This is the content for article One.This is the content for article One.This is the content for article One.
-           </p>
-           <p>
-         This is the content for article One. This is the content for article One.This is the content for article One.
-           This is the content for article One.This is the content for article One.This is the content for article One.This is the content for article One.This is the content for article One.This is the content for article One.
-            </p>`    
-     
+var article={
+    articleone:{
+                 title : 'Article One',
+                 heading3: 'Article One',
+                 date: 'Sep 5 , 2016',
+                 content:`<p>
+                      This is the content for article One. This is the content for article One.This is the content for article One.This is the content for article One.This is the content for article One.This is the content for article One.This is the content for article One.This is the content for article One.This is the content for article One.
+                      </p>
+                      <p>
+                      This is the content for article One. This is the content for article One.This is the content for article One.This is the content for article One.This is the content for article One.This is the content for article One.This is the content for article One.This is the content for article One.This is the content for article One.
+                       </p>
+                       <p>
+                           This is the content for article One. This is the content for article One.This is the content for article One.This is the content for article One.This is the content for article One.This is the content for article One.This is the content for article One.This is the content for article One.This is the content for article One.
+                         </p>`    
+                    },
+      articletwo:{
+                    title: 'Article Two', 
+                    heading3:'Article Two',
+                   date: 'Sep 5 , 2016',
+                   content:`  <p>
+                              This is the content for article Two
+                              </p>`
+
+                                   
+          
+      }
+    
+                
+    
 };
 
 
-
-var articleoneFn=function(data){ 
+var articleFn=function(data){ 
     var title=data.title;
     var heading3=data.heading3;
     var date=data.date;
@@ -79,17 +90,10 @@ app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 
-app.get ('/article-one',function(req,res){
-    res.send(articleoneFn(articleoneObj));
+app.get ('/:articleName',function(req,res){
+    res.send(articleFn(article[articleName]));
 });
 
-app.get ('/article-two',function(req,res){
-    res.sendFile(path.join(__dirname,'ui','article-two.html'));
-});
-
-app.get ('/article-three',function(req,res){
-    res.sendFile(path.join(__dirname,'ui','article-three.html'));
-});
 
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80

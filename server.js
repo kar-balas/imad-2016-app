@@ -30,10 +30,17 @@ var article={
                               This is the content for article Two
                               </p>`
 
-                                   
-          
-      }
+      },
     
+      'article-three':{
+                    title: 'Article Three', 
+                    heading3:'Article Three',
+                   date: 'Sep 5 , 2016',
+                   content:`  <p>
+                              This is the content for article Three
+                              </p>`
+
+      }
                 
     
 };

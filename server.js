@@ -22,7 +22,7 @@ var article={
                            This is the content for article One. This is the content for article One.This is the content for article One.This is the content for article One.This is the content for article One.This is the content for article One.This is the content for article One.This is the content for article One.This is the content for article One.
                          </p>`    
                     },
-      'articletwo':{
+      'article-two':{
                     title: 'Article Two', 
                     heading3:'Article Two',
                    date: 'Sep 5 , 2016',

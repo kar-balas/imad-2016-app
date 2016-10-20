@@ -9,8 +9,7 @@ app.use(morgan('combined'));
 // htmlTemplate
 
 var articleone=function(){ 
-    var htmlTemplate = {
-    `<html>
+    var htmlTemplate =    `<html>
      <head>
         <title>
           Article One
@@ -48,9 +47,7 @@ var articleone=function(){
               </div>
               </div>
 
-            </body>
-    
-            };
+            </body>`  ;
             return htnlTemplate;
             };
             

@@ -6,7 +6,7 @@ var app = express();
 app.use(morgan('combined'));
 
 
-// htmlTemplate
+// htmlTemplatehttps://cloud.imad.hasura.io/code/files/server.js
 var article={
    'article-one':{
                  title : 'Article One',

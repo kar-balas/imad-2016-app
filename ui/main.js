@@ -3,7 +3,7 @@ console.log('Loaded!');
 var element= document.getElementById('main_text');
 element.innerHTML="New value";
 var img = document.getElementById("madi");
-madi.onClick = function(){
+ img.onClick = function(){
     alert("In OnClick");
-    madi.style.marginLeft = '100px';
+    img.style.marginLeft = '100px';
 };

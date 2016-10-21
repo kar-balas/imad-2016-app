@@ -5,7 +5,6 @@ element.innerHTML="New value";
 var img = document.getElementById("madi");
 console.log('Loaded2');
  img.onClick = function(){
-    alert("In OnClick");
     console.log("Inside OnClick");
-    img.style.marginLeft = '100px';
+ //   img.style.marginLeft = '100px';
 };

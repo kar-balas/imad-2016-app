@@ -2,11 +2,9 @@ console.log('Loaded!');
 // chanfe the text of main file div
 var element= document.getElementById('main_text');
 element.innerHTML="New value";
-var img = document.getElementById("madi");
-console.log('Loaded2');
-console.log(img);
+var img = document.getElementById('madi');
  img.onClick = function(){
      alert("Inside OnClick");
     console.log('Inside OnClick');
- //  img.style.marginLeft = marginLeft+ '100px';
+ //  img.style.marginLeft = marginLeft+ //'100px';
 };

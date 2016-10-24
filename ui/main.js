@@ -7,5 +7,5 @@ console.log('Loaded2');
 console.log(img);
  img.onClick = function(){
     console.log("Inside OnClick");
-   img.style.marginLeft = marginLeft+ '100px';
+ //  img.style.marginLeft = marginLeft+ '100px';
 };

@@ -3,16 +3,14 @@ console.log('Loaded!');
 var element= document.getElementById('main_text');
 element.innerHTML="New value";
 var img = document.getElementById('madi');
-var marginright=0;
+var marginleft=0;
 function  moveright(){
-    marginright=marginright+10;
- img.style.marginLeft = marginright +'px';   
+    marginleft=marginleft+10;
+ img.style.marginLeft = marginleft +'px';   
     
 }
 
-
-
  img.onclick = function(){
-     setinterval(moveright,100);
+   var interval =  setinterval(moveright,100);
  
 };

@@ -1,7 +1,7 @@
 console.log('Loaded!');
 // chanfe the text of main file div
 var element= document.getElementById('main_text');
-element.innerHTML="New value";
+element.innerHTML="New value from localhost";
 var img = document.getElementById('madi');
 var marginLeft=0;
 var i;

@@ -18,7 +18,7 @@ function  moveRight(){
 
 var ctrbutton=element.getElementById('ctrBtn');
 counter=0;
-ctrbutton.onclick = function(){
+ctrbtn.onclick = function(){
     counter+=1;
  element=document.getElementById('counter');   
  element.innerHTML=counter.toString();

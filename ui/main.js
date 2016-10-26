@@ -16,7 +16,7 @@ function  moveRight(){
    var interval =  setInterval(moveRight,50);
 };
 
-var ctrbutton=element.getElementById('ctrBtn');
+var ctrbutton=document.getElementById('ctrBtn');
 counter=0;
 ctrbutton.onclick = function(){
     counter+=1;

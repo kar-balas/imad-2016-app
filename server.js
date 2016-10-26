@@ -100,12 +100,12 @@ app.get('/ui/favicon.ico', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'favicon.ico'));
 });
 
-//var counter=0;
-//app.get('/ui/counter', function (req, res) {
-//counter = counter + 1;
- // res.send(counter.toString());
+var counter=0;
+app.get('/ui/counter', function (req, res) {
+counter = counter + 1;
+ res.send(counter.toString());
     
-//});
+});
 
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui','madi.png'));

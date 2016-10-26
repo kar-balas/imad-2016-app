@@ -22,5 +22,5 @@ ctrbutton.onclick = function(){
     counter+=1;
  element=document.getElementById('counter');   
  element.innerHTML=counter.toString();
-}
+};
 

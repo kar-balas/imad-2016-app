@@ -21,6 +21,7 @@ counter=0;
 ctrbutton.onclick = function(){
     counter+=1;
     element=document.getElementById(ctrBtn);
+    console.log(element.innerHTML);
     element.innerHTML="Clicked";
 // element=document.getElementById('counter');   
 // element.innerHTML=counter.toString();

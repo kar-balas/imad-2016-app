@@ -103,7 +103,6 @@ app.get('/ui/favicon.ico', function (req, res) {
 var counter=0;
 app.get('/ui/counter', function (req, res) {
 counter +=1;
-res.send("Counter:");
   res.send(counter.toString());
     
 });

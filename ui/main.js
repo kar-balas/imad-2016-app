@@ -23,7 +23,7 @@ ctrbutton.onclick = function(){
     element=document.getElementById('ctrBtn');
     console.log(element.innerHTML);
     element.innerHTML="Clicked";
-// element=document.getElementById('counter');   
-// element.innerHTML=counter.toString();
+element=document.getElementById('counter');   
+ element.innerHTML=counter.toString();
 };
 

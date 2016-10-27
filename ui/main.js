@@ -9,7 +9,9 @@ ctr += 1;
 var element=document.getElementById('counter');
 console.log("incremented value is:");
 console.log(ctr);
-element.innerHtml=ctr.toString();
+element.innerHTML=ctr.toString();
+console.log("inner html is:");
+console.log(element.innerHTML);
     
 };
 

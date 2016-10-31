@@ -1,3 +1,14 @@
+//var counter=0;
+
+//execute what u want to do
+console.log("Welcoome to main");
+
+var ctrButton=document.getElementById('ctrBtn');
+    console.log('Outside Button Click');
+ctrButton.onclick=function(){
+    
+
+
 // create a request to counter endpoint
 //var request=new XMLHttpRequest();
 //
@@ -13,16 +24,10 @@
   //    request.send(null);
  // }
 //}
-//};     
-
-var counter=0;
-
-//execute what u want to do
-console.log("Welcoome to main");
-
-var ctrButton=document.getElementById('ctrBtn');
-    console.log('Outside Button Click');
-ctrButton.onclick=function(){
+//}; 
+    
+  
+    
     console.log('Inside Button Click');
 counter += 1;
 var element=document.getElementById('counter');

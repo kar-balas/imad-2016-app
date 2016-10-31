@@ -34,3 +34,6 @@ element.innerHTML=counter.toString();
     
 //counter += 1;
 };
+
+
+

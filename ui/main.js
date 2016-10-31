@@ -8,12 +8,12 @@
 
 
 //execute what u want to do
-log.console("Welcoome to main");
+console.log("Welcoome to main");
 var ctr =0;
 var ctrButton=document.getElementById('ctrBtn');
-    log.console('Outside Button Click');
+    console.log('Outside Button Click');
 ctrButton.onclick=function(){
-    log.console('Inside Button Click');
+    console.log('Inside Button Click');
 ctr += 1;
 var element=document.getElementById('counter');
 element.innerHTML=ctr.toString();

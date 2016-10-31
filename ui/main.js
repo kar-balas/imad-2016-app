@@ -28,7 +28,7 @@ element.innerHTML=counter.toString();
 }
 }; 
     
-     request.open('GET','http://kar-balas.imad-hasura-app.io/counter',true);
+     request.open('GET','http://kar-balas.imad.hasura-app.io/counter',true);
       request.send(null);
   
     

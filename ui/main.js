@@ -1,4 +1,4 @@
-//var counter=0;
+var counter=0;
 
 //execute what u want to do
 console.log("Welcoome to main");
@@ -10,21 +10,21 @@ ctrButton.onclick=function(){
 
 
 // create a request to counter endpoint
-//var request=new XMLHttpRequest();
+var request=new XMLHttpRequest();
 //
 //make a request
 //detect a change and do what u wan to do whateever
 
-//request.onreadystatechange=function(){
-//if (request.onreadyState === XMLHttpRequest.DONE){
- // if (request.status === 200)
- // {
- //     var counter =request.responseText;
- //     request.open('GET','http://kar-balas.imad-hasura-app.io',true);
-  //    request.send(null);
- // }
-//}
-//}; 
+request.onreadystatechange=function(){
+if (request.onreadyState === XMLHttpRequest.DONE){
+ if (request.status === 200)
+ {
+     var counter =request.responseText;
+     request.open('GET','http://kar-balas.imad-hasura-app.io',true);
+      request.send(null);
+  }
+}
+}; 
     
   
     

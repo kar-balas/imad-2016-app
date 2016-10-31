@@ -22,13 +22,14 @@ if (request.readyState === XMLHttpRequest.DONE){
      var counter =request.responseText;
 var element=document.getElementById('count');
 element.innerHTML=counter.toString();
+
+ }
      
-     request.open('GET','http://kar-balas.imad-hasura-app.io/counter',true);
-      request.send(null);
-  }
 }
 }; 
     
+     request.open('GET','http://kar-balas.imad-hasura-app.io/counter',true);
+      request.send(null);
   
     
 //counter += 1;

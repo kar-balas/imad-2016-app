@@ -1,4 +1,4 @@
-var counter=0;
+//var counter=0;
 
 //execute what u want to do
 console.log("Welcoome to main");
@@ -16,10 +16,13 @@ var request=new XMLHttpRequest();
 //detect a change and do what u wan to do whateever
 
 request.onreadystatechange=function(){
-if (request.onreadyState === XMLHttpRequest.DONE){
+if (request.readyState === XMLHttpRequest.DONE){
  if (request.status === 200)
  {
      var counter =request.responseText;
+var element=document.getElementById('counter');
+element.innerHTML=counter.toString();
+     
      request.open('GET','http://kar-balas.imad-hasura-app.io',true);
       request.send(null);
   }
@@ -28,8 +31,5 @@ if (request.onreadyState === XMLHttpRequest.DONE){
     
   
     
-    console.log('Inside Button Click');
-counter += 1;
-var element=document.getElementById('counter');
-element.innerHTML=counter.toString();
+//counter += 1;
 };

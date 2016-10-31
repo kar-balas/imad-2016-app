@@ -20,7 +20,7 @@ if (request.readyState === XMLHttpRequest.DONE){
  if (request.status === 200)
  {
      var counter =request.responseText;
-var element=document.getElementById('counter');
+var element=document.getElementById('count');
 element.innerHTML=counter.toString();
      
      request.open('GET','http://kar-balas.imad-hasura-app.io',true);

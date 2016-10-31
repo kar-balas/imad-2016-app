@@ -8,6 +8,7 @@
 
 
 //execute what u want to do
+log.console("Welcoome to main");
 var ctr =0;
 var ctrButton=document.getElementById('ctrBtn');
     log.console('Outside Button Click');

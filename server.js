@@ -88,6 +88,11 @@ var articleFn=function(data){
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
+// added a new html page (by me)
+app.get('/names', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'names.html'));
+});
+
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));

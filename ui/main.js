@@ -1,9 +1,9 @@
 // InputNames
-console.log("Wwlelcome to main");
-var submitElement=document.getElementById('submitId');
-console.log("The Submit Element is:");
-console.log(submitElement);
 submitElement.onclick=function(){
+            console.log("Wwlelcome to main");
+            var submitElement=document.getElementById('submitId');
+            console.log("The Submit Element is:");
+            console.log(submitElement);
             console.log("Inside onclick");
             var inputElement=document.getElementById('inputnames');
             var name=element.value;

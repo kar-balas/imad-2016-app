@@ -1,17 +1,18 @@
 // InputNames
 var submitElement=document.getElementById('submitId');
 submitElement.onclick=function(){
-var inputElement=document.getElementById('inputnames');
-var name=element.value;
-var names=[];
-var list='';
+            console.log("Inside onclick");
+            var inputElement=document.getElementById('inputnames');
+            var name=element.value;
+            var names=[];
+            var list='';
 
-names.push(name);
-for(i=0;i<names.length;i++){
-list='<li>'+names[i]+'</li>';   
-}
-var ulElement=document.getElementById('namelist');
-ulElement.innerHTML=list;
+            names.push(name);
+            for(i=0;i<names.length;i++){
+                list='<li>'+names[i]+'</li>';   
+                }
+            var ulElement=document.getElementById('namelist');
+            ulElement.innerHTML=list;
 
 };
 

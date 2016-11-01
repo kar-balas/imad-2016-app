@@ -1,3 +1,33 @@
+// InputNames
+var submitElement=document.getElementById('submitId');
+submitElement.onclick=function(){
+var inputElement=document.getElementById('inputnames');
+var name=element.value;
+var names=[];
+var list='';
+
+names.push(name);
+for(i=0;i<names.length;i++){
+list='<li>'+names[i]+'</li>';   
+}
+var ulElement=document.getElementById('namelist');
+ulElement.innerHTML=list;
+
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //var counter=0;
 
 //execute what u want to do
@@ -32,22 +62,6 @@ element.innerHTML=counter.toString();
 //counter += 1;
 };
 
-// InputNames
-var submitElement=document.getElementById('submitId');
-submitElement.onclick=function(){
-var inputElement=document.getElementById('inputnames');
-var name=element.value;
-var names=[];
-var list='';
-
-names.push(name);
-for(i=0;i<names.length;i++){
-list='<li>'+names[i]+'</li>';   
-}
-var ulElement=document.getElementById('namelist');
-ulElement.innerHTML=list;
-
-};
 
 
 

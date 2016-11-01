@@ -33,7 +33,7 @@ element.innerHTML=counter.toString();
 };
 
 // InputNames
-var submitElement=getElementById('submitId');
+var submitElement=document.getElementById('submitId');
 submitElement.onclick=function(){
 var inputElement=document.getElementById('inputnames');
 var name=element.value;

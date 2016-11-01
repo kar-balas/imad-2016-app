@@ -85,7 +85,7 @@ var articleFn=function(data){
             };
             
 
-app.get('/', function (req, res) {
+app.get('/',function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 // added a new html page (by me)

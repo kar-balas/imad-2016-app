@@ -1,4 +1,5 @@
 // InputNames
+console.log("Wwlelcome to main");
 var submitElement=document.getElementById('submitId');
 submitElement.onclick=function(){
             console.log("Inside onclick");

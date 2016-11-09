@@ -4,6 +4,15 @@ var path = require('path');
 
 var app = express();
 app.use(morgan('combined'));
+//step1 for db
+var Pool =require('pg').Pool;
+//step2 for db
+var config={
+    host:'loalhost',
+    user:'kar-balas',
+    password:process.env.DB_PASSWORD,
+    database:'kar-balas'
+};
 
 
 // htmlTemplatehttps://cloud.imad.hasura.io/code/files/server.js
@@ -112,6 +121,22 @@ var counter=0;
 app.get('/counter', function (req, res) {
 counter = counter + 1;
  res.send(counter.toString());
+});
+
+app.get('/test-db',function(req,res)
+{
+    // makes a select request
+    //returns a respponse with a result
+   pool.query('SELECT * FROM article',function(err,result){
+       if(err){
+           res.status(500).send(err.toString());
+       }
+       else{
+           res.send(JSON.stringify(result));
+       }
+       
+   }); 
+    
 });
 
 // add an endpoint for url called /submit-names which has an array of list of names

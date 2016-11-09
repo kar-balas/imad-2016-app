@@ -20,10 +20,10 @@ var article={
                        </p>
                        <p>
                            This is the content for article One. This is the content for article One.This is the content for article One.This is the content for article One.This is the content for article One.This is the content for article One.This is the content for article One.This is the content for article One.This is the content for article One.
-                         </p>`    
+                         </p>`
                     },
       'article-two':{
-                    title: 'Article Two', 
+                    title: 'Article Two',
                     heading3:'Article Two',
                    date: 'Sep 5 , 2016',
                    content:`  <p>
@@ -31,9 +31,9 @@ var article={
                               </p>`
 
       },
-    
+
       'article-three':{
-                    title: 'Article Three', 
+                    title: 'Article Three',
                     heading3:'Article Three',
                    date: 'Sep 5 , 2016',
                    content:`  <p>
@@ -41,12 +41,12 @@ var article={
                               </p>`
 
       }
-                
-    
+
+
 };
 
 
-var articleFn=function(data){ 
+var articleFn=function(data){
     var title=data.title;
     var heading3=data.heading3;
     var date=data.date;
@@ -72,22 +72,24 @@ var articleFn=function(data){
          </h3>
          <div>
          ${date}
-        
+
           </div>
          <div>
          ${content}
-         
+
               </div>
               </div>
 
             </body>`  ;
             return htmlTemplate;
             };
-            
+
+
 
 app.get('/',function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
+
 // added a new html page (by me)
 app.get('/names', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'names.html'));
@@ -105,11 +107,27 @@ app.get('/ui/favicon.ico', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'favicon.ico'));
 });
 
+// add an endpoint url for /counter
 var counter=0;
 app.get('/counter', function (req, res) {
 counter = counter + 1;
  res.send(counter.toString());
 });
+
+// add an endpoint for url called /submit-names which has an array of list of names
+//app.get('/submit-names/?name=xxx', function (req, res) {
+  var names= [];
+  // names is an array declared in names.html
+//  app.get('/submit-name/:name',function(req, res){
+//  var newName=req.params.name;
+  app.get('/submit-name',function(req, res){// uRL /submit-name? name=xxx
+  var newName=req.query.name;
+
+
+  names.push(newName);
+  res.send(JSON.stringify(names));
+});
+
 
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui','madi.png'));
@@ -122,8 +140,8 @@ app.get ('/:articleName',function(req,res){
 
 app.get('/ui/main.js',function (req,res){
    res.sendFile(path.join(__dirname,'ui','main.js'));
-    
-    
+
+
 });
 
 

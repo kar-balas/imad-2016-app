@@ -123,11 +123,12 @@ counter = counter + 1;
  res.send(counter.toString());
 });
 
+var pool = new Pool(config);
 app.get('/test-db',function(req,res)
 {
     // makes a select request
     //returns a respponse with a result
-   Pool.query('SELECT * FROM article',function(err,result){
+   pool.query('SELECT * FROM article',function(err,result){
        if(err){
            res.status(500).send(err.toString());
        }
